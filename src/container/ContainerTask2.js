@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Task2 } from "../components/Task2";
+import utils from "../libs/utils";
 
 export const ContainerTask2 = (props) => {
   const [user, setUser] = useState({});
@@ -9,9 +10,7 @@ export const ContainerTask2 = (props) => {
     props.data.forEach((element) => {
       if (element.userId === userId) {
         setUser(element);
-        console.log('score', (parseInt(element.level) * parseInt(element.coins)) + parseInt(element.time));
-        setUserScore((parseInt(element.level)*parseInt(element.coins)) + parseInt(element.time));
-
+        setUserScore( utils.instance.calculateScore(element.level , element.coins, element.time));
       }})
   }
   return (
