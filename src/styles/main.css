@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+}
+
+.logo-menu {
+  width: 50px;
+  height: 50px;
+}
+
+.container {
+  background-color: #282c34;
+  min-height: 90vh;
+  height: 100%;
+  display: flex;
+  color: white;
+  padding: 0px 5px;
+  width: 100%;
+}
+
+.container-component {
+  width: 100%;
+}
+
+.title-component {
+  text-align: center;
+  width: 100%;
+  font-size: larger;
+}
+
+.row-user{
+  display: flex;
+  flex-direction: row;
+}
+
+.container-user{
+  width: 80%;
+  border: 1px solid;
+  padding: 5px;
+  margin: 5px;
+}
+
+.row-user{
+  width: 100%;
+}
+
+.col-user{
+  width: 10%;
+  text-align: left;
+}
+
+.col-user-body{
+  width: 50%;
+  text-align: left;
+}
