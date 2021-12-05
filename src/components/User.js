@@ -2,7 +2,7 @@ import React from "react";
 
 export const User = (props) => {
   return (
-    <div>
+    <div className="container-component">
       {props.user.userId && (
         <div className="container-user">
           <div className="row-user">

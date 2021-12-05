@@ -7,7 +7,7 @@ export const Task1 = (props) => {
       <div className="title-component">Level Up</div>
       <input
         type="button"
-        onClick={() => props.levelUp("bec6ea91-9bd8-471c-a19f-a53cefe2a9b3")}
+        onClick={() => props.levelUp()}
         value="calcular"
       />
       <br />

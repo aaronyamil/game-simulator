@@ -7,6 +7,7 @@ import { ContainerTask1 } from "./container/ContainerTask1";
 import { ContainerTask2 } from "./container/ContainerTask2";
 import { ContainerTask3 } from "./container/ContainerTask3";
 import { ContainerTask4 } from "./container/ContainerTask4";
+import { ContrainerTask5 } from "./container/ContrainerTask5";
 
 const userId = "bec6ea91-9bd8-471c-a19f-a53cefe2a9b3";
 
@@ -64,6 +65,11 @@ function App() {
             value="Sub Task D"
             onClick={() => navigation(3)}
           />
+          <input
+            type="button"
+            value="Sub Task E"
+            onClick={() => navigation(4)}
+          />
         </div>
       </header>
       <div className="container">
@@ -71,6 +77,7 @@ function App() {
         {menu === 1 && <ContainerTask2 data={data} user={user} />}
         {menu === 2 && <ContainerTask3 data={data} user={user} />}
         {menu === 3 && <ContainerTask4 data={data} user={user} />}
+        {menu === 4 && <ContrainerTask5 data={data} user={user} />}
       </div>
     </div>
   );

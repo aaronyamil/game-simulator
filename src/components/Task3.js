@@ -1,5 +1,4 @@
 import React from "react";
-import { User } from "./User";
 //bec6ea91-9bd8-471c-a19f-a53cefe2a9b3
 export const Task3 = (props) => {
   return (
