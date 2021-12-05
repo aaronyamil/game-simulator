@@ -11,19 +11,25 @@ class utils {
     }
   };
 
-  calculateScoreGlobal = (data,user,validate) => {
+  calculateScoreGlobal = (data, user, validate) => {
     try {
       let score = 0;
       let arrayPosition = [];
       data.forEach((element) => {
-        if(validate(element,user)) {
-        console.log(element.level + ' - '+ element.coins + ' - '+ element.time);
-        score = this.calculateScore(element.level, element.coins, element.time);
+        if (validate(element, user)) {
+          console.log(
+            element.level + " - " + element.coins + " - " + element.time
+          );
+          score = this.calculateScore(
+            element.level,
+            element.coins,
+            element.time
+          );
 
-        arrayPosition.push({ userId: element.userId, score: score });
-      } 
+          arrayPosition.push({ userId: element.userId, score: score });
+        }
       });
-      arrayPosition.sort((function(a, b) {
+      arrayPosition.sort(function (a, b) {
         if (a.score < b.score) {
           return 1;
         }
@@ -31,8 +37,8 @@ class utils {
           return -1;
         }
         return 0;
-      }));
-      console.log('array', arrayPosition);
+      });
+      console.log("array", arrayPosition);
       return arrayPosition;
     } catch (error) {
       console.log("get error", error);
@@ -40,5 +46,6 @@ class utils {
     }
   };
 }
+
 
 export default utils;
