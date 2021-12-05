@@ -11,15 +11,17 @@ class utils {
     }
   };
 
-  calculateScoreGlobal = (data) => {
+  calculateScoreGlobal = (data,user,validate) => {
     try {
       let score = 0;
       let arrayPosition = [];
       data.forEach((element) => {
+        if(validate(element,user)) {
         console.log(element.level + ' - '+ element.coins + ' - '+ element.time);
         score = this.calculateScore(element.level, element.coins, element.time);
 
         arrayPosition.push({ userId: element.userId, score: score });
+      } 
       });
       arrayPosition.sort((function(a, b) {
         if (a.score < b.score) {

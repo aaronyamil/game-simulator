@@ -8,13 +8,13 @@ export const Task3 = (props) => {
       <input
         type="button"
         onClick={() =>
-          props.calculateGlobalRankPosition("bec6ea91-9bd8-471c-a19f-a53cefe2a9b3")
+          props.calculateGlobalRankPosition()
         }
         value="calcular"
       />
       <br />
       <span>UserId: </span>
-      <i>{props.user}</i>
+      <i>{props.user.userId}</i>
       <br />
       <span>User Position: </span>
       <b>{props.position}</b>

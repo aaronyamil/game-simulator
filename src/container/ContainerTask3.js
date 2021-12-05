@@ -4,22 +4,20 @@ import utils from "../libs/utils";
 
 export const ContainerTask3 = (props) => {
   const [position, setPosition] = useState(0);
-  const [user, setUser] = useState();
 
-  const calculateGlobalRankPosition = (userId) => {
-    let arrayScores = utils.instance.calculateScoreGlobal(props.data)
+  const calculateGlobalRankPosition = () => {
+    let arrayScores = utils.instance.calculateScoreGlobal(props.data,props.user,()=>true)
     arrayScores.forEach((element,index) => {
-      if (element.userId === userId) {
+      if (element.userId === props.user.userId) {
         setPosition(
           index
         );
-        setUser(userId)
       }
     });
   };
   return (
     <div className="container-component">
-      <Task3 calculateGlobalRankPosition={calculateGlobalRankPosition} position={position} user={user}/>
+      <Task3 calculateGlobalRankPosition={calculateGlobalRankPosition} position={position} user={props.user}/>
     </div>
   );
 };
