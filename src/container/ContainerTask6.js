@@ -60,17 +60,14 @@ export const ContrainerTask6 = (props) => {
     });
     // Level
     const time8hours = 28800;
-
-    setLevel(
-      parseInt(props.user.level) +
-        Math.round(
-          parseInt(props.user.time) > time8hours
-            ? parseInt(props.user.time) / time8hours
-            : parseInt(props.user.level)
-        )
+    const newLevel = Math.round(
+      parseInt(props.user.time) > time8hours
+        ? parseInt(props.user.time) / time8hours
+        : parseInt(props.user.level)
     );
+    setLevel(parseInt(props.user.level) + newLevel);
     // time
-    setTime(parseInt(props.user.time) - time8hours * Math.round(level));
+    setTime(parseInt(props.user.time) - time8hours * Math.round(newLevel));
   };
 
   return (
