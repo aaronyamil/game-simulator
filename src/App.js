@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import "./styles/main.css";
@@ -12,15 +12,15 @@ import { ContrainerTask6 } from "./container/ContainerTask6";
 import { ContainerTask7 } from "./container/ContainerTask7";
 
 const userId = "bec6ea91-9bd8-471c-a19f-a53cefe2a9b3";
-
 function App() {
   const [menu, setmenu] = useState(0);
   const [user, setUser] = useState({});
   const [data, setData] = useState([]);
 
-  const getData = async () => {
+  const GetData = async () => {
+    // let url = "../data/users.data.json";
+    // const res = useMemo(() => http.instance.get(url), [url]);
     const res = await http.instance.get("../data/users.data.json");
-
     setData(JSON.parse(res));
 
     JSON.parse(res).forEach((element) => {
@@ -33,7 +33,7 @@ function App() {
   };
 
   useEffect(() => {
-    getData();
+    GetData();
   }, []);
 
   const navigation = (key) => {
