@@ -9,16 +9,16 @@ export const ContainerTask4 = (props) => {
     return data.country === user.country
   }
 
-  const calculateNationalRankPosition = (userId) => {
+  const calculateNationalRankPosition = () => {
     let arrayScores = utils.instance.calculateScoreGlobal(props.data,props.user,nationalCondition);
     arrayScores.forEach((element, index) => {
-      if (element.userId === userId) {
+      if (element.userId === props.user.userId) {
         setPosition(index);
       }
     });
   };
   return (
-    <div>
+    <div className="container-component">
       <Task4 calculateNationalRankPosition={calculateNationalRankPosition} position={position} user={props.user}/>
     </div>
   );

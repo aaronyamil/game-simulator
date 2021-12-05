@@ -1,12 +1,12 @@
 import React from "react";
 
-export const Task4 = (props) => {
+export const Task5 = (props) => {
   return (
     <div className="container-component">
-      <div className="title-component">Calculate National Position</div>
+      <div className="title-component">Calculate Friends Position</div>
       <input
         type="button"
-        onClick={() => props.calculateNationalRankPosition()}
+        onClick={() => props.calculateFriendsPosition()}
         value="calcular"
       />
       <br />
@@ -14,9 +14,9 @@ export const Task4 = (props) => {
       <i>{props.user.userId}</i>
       <br />
       <span>
-        User Position <i>{props.user.country}</i>:{" "}
+        User Position <i>Friends</i>:
       </span>
-      <b>{props.position}</b>
+      <b> {props.position}</b>
     </div>
   );
 };
