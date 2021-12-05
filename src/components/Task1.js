@@ -10,7 +10,10 @@ export const Task1 = (props) => {
         onClick={() => props.levelUp("bec6ea91-9bd8-471c-a19f-a53cefe2a9b3")}
         value="calcular"
       />
+      <br />
+      <span>User:</span>
       <User user={props.user} />
+      <span>User Level UP:</span>
       <User user={props.userLevelUp} />
     </div>
   );
